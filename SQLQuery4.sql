@@ -1,11 +1,15 @@
 use Academy
---декартовое произведение, все пересечения преподов и групп
+--Г¤ГҐГЄГ Г°ГІГ®ГўГ®ГҐ ГЇГ°Г®ГЁГ§ГўГҐГ¤ГҐГ­ГЁГҐ, ГўГ±ГҐ ГЇГҐГ°ГҐГ±ГҐГ·ГҐГ­ГЁГї ГЇГ°ГҐГЇГ®Г¤Г®Гў ГЁ ГЈГ°ГіГЇГЇ
 select t.Surname, t.Name, g.Name
 from Teachers as t, Groups g
 
 select t.Surname, g.Name
 from Teachers as t, Groups g, GroupsCurators gc
 where gc.CuratorId=t.Id AND gc.GroupId=g.Id;
+
+select t.Surname, g.Name
+from Teachers as t, Groups g, Lectures l                                                                                                                                                                               
+where l.TeacherId=t.Id AND g.Name ='123'
 
 select t.Surname, g.Name
 from Teachers as t, Groups g, Lectures l                                                                                                                                                                               
